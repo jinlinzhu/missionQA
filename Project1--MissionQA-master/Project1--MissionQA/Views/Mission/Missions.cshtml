@@ -1,0 +1,24 @@
+﻿@model Project1__MissionQA.Models.Mission
+
+@{
+    ViewBag.Title = "Missions";
+}
+
+<h2>Missions</h2>
+
+<p>Select a mission below:</p>
+<div class="form-group">
+    
+    <div>
+        @using (Html.BeginForm("YourMission", "Mission", FormMethod.Post))
+        {
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Name, new SelectList(ViewBag.missions))
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+
+            <input type="submit" value="Go to your mission page" />
+        }
+    </div>
+</div>

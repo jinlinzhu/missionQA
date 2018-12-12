@@ -1,0 +1,89 @@
+.navigation-container{
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 25px 50px;
+}
+
+.navigation-container > div {
+    border: 1px solid lightgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navigation-container ul{
+    padding-left: 35px !important;
+}
+
+.navigation-container a {
+    text-decoration: none;
+}
+
+
+.navigation-container h4 {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.navigation-top {
+    height: 250px;
+    margin-bottom: 25px;
+}
+
+.navigation-top:hover {
+    opacity: 0.9;
+}
+
+@media only screen and (max-width: 1250px) {
+    .navigation-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .navigation-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .navigation-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.navigation-container .fas {
+    font-size: 55px;
+    line-height: 100px;
+    text-align: center;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.navigation-container span {
+    font-size: 55px;
+    line-height: 100px;
+    text-align: center;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.et_pb_module_header .fas {
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+@font-face {
+    font-family: "saints";
+    src: url("Glyphter.ttf");
+}
+
+.container.body-content {
+    max-width: unset;
+}
