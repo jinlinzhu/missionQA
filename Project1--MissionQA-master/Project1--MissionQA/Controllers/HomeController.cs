@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
+//Authors: Conner Paulson, Kristy Knapp, Jinlin Zhu, Clayton Pettit; Group 2-1
+//Description: Mission site for future missionaries; can see information about their mission
 namespace Project1__MissionQA.Controllers
 {
     public class HomeController : Controller
