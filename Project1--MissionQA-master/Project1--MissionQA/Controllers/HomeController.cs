@@ -43,7 +43,7 @@ namespace Project1__MissionQA.Controllers
             }
             else
             {
-                return View();
+                return View(form);
             }
         }
     }
