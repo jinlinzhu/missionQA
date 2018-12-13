@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Project1__MissionQA.DAL
 {
-    public class MissionQAContext :DbContext
+    public class MissionQAContext : DbContext
     {
         public MissionQAContext() : base("MissionQAContext")
         {

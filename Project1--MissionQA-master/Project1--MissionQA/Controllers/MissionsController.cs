@@ -11,6 +11,7 @@ using Project1__MissionQA.Models;
 
 namespace Project1__MissionQA.Controllers
 {
+    [Authorize]
     public class MissionsController : Controller
     {
         private MissionQAContext db = new MissionQAContext();
@@ -123,6 +124,25 @@ namespace Project1__MissionQA.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [AllowAnonymous]
+        public ActionResult Overview()
+        {
+            return View();
+        }
+
+        public ActionResult FAQ(string email)
+        {
+            IEnumerable<MissionQuestions> questions = db.Database.SqlQuery<MissionQuestions>(
+            "SELECT question, answer " +
+            "FROM MissionQuestions " +
+            "INNER JOIN Users ON MissionQuestions.userID = Users.userID" +
+            "WHERE userEmail = '" + email + "'");
+
+            ViewBag.questions = questions.ToList();
+
+            return View();
         }
     }
 }
