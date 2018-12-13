@@ -21,6 +21,15 @@ namespace Project1__MissionQA.Controllers
             return View();
         }
 
+
+       
+
+
+
+
+
+
+
         //POST: Mission
         [HttpPost]
         public ActionResult YourMission(Mission mission)
@@ -59,5 +68,7 @@ namespace Project1__MissionQA.Controllers
                 return View(mission);
             }
         }
+
+       
     }
 }
