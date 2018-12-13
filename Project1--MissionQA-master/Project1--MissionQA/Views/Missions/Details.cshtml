@@ -1,0 +1,74 @@
+﻿@model Project1__MissionQA.Models.Missions
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Missions</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.missionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionPresidentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionPresidentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionClimate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionClimate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionDomReligion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionDomReligion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionSymbol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionSymbol)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.missionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

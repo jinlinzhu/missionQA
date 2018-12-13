@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Project1__MissionQA.Models.Missions>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.missionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.missionPresidentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.missionAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.missionLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.missionClimate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.missionDomReligion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.missionSymbol)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionPresidentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionClimate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionDomReligion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionSymbol)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.missionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.missionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.missionID })
+        </td>
+    </tr>
+}
+
+</table>

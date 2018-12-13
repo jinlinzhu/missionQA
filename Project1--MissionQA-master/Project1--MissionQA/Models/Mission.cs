@@ -22,6 +22,5 @@ namespace Project1__MissionQA.Models
         public string DominantReligion { get; set; }
 
         public string Symbol { get; set; }
-
     }
 }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Project1__MissionQA.DAL;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +13,7 @@ namespace Project1__MissionQA
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<MissionQAContext>(null);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
