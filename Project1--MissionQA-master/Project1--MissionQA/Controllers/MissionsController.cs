@@ -11,7 +11,7 @@ using Project1__MissionQA.Models;
 
 namespace Project1__MissionQA.Controllers
 {
-    [Authorize]
+
     public class MissionsController : Controller
     {
         private MissionQAContext db = new MissionQAContext();
@@ -132,6 +132,7 @@ namespace Project1__MissionQA.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult FAQ(string email)
         {
             IEnumerable<MissionQuestions> questions = db.Database.SqlQuery<MissionQuestions>(
