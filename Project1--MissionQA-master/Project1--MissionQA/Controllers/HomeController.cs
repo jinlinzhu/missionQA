@@ -33,7 +33,7 @@ namespace Project1__MissionQA.Controllers
             var currentUser = db.Database.SqlQuery<Users>(
             "Select * " +
             "FROM Users " +
-            "WHERE UserID = '" + email + "' AND " +
+            "WHERE userEmail = '" + email + "' AND " +
             "UserPassword = '" + password + "'");
 
             if (currentUser.Count() > 0)

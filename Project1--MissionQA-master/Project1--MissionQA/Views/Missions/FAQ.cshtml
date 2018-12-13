@@ -1,34 +1,51 @@
-﻿@{
+﻿@model IEnumerable<Project1__MissionQA.Models.MissionQuestions>
+
+@{
     ViewBag.Title = "FAQ";
 }
 
 <h2>FAQ</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
-            Question
+            @Html.DisplayNameFor(model => model.Missions.missionName)
         </th>
         <th>
-            Answer
+            @Html.DisplayNameFor(model => model.Users.userEmail)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.answer)
+        </th>
+        <th></th>
     </tr>
 
-    @foreach (var item in ViewBag.questions)
-    {
-        <tr>
-            <td>
-                @item.question
-            </td>
-            <td>
-                @item.answer
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.missionID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.missionID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.missionID })
-            </td>
-        </tr>
-    }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Missions.missionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Users.userEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.answer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.questionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.questionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.questionID })
+        </td>
+    </tr>
+}
 
 </table>

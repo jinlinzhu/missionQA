@@ -40,6 +40,7 @@ namespace Project1__MissionQA.Controllers
         // GET: MissionQuestions/Create
         public ActionResult Create()
         {
+            ViewBag.missionID = new SelectList(db.missions, "missionID", "missionName");
             ViewBag.userID = new SelectList(db.users, "userID", "userEmail");
             return View();
         }
@@ -59,6 +60,7 @@ namespace Project1__MissionQA.Controllers
             }
 
             ViewBag.userID = new SelectList(db.users, "userID", "userEmail", missionQuestions.userID);
+            ViewBag.missionID = new SelectList(db.missions, "missionID", "missionName", missionQuestions.missionID);
             return View(missionQuestions);
         }
 
@@ -75,6 +77,7 @@ namespace Project1__MissionQA.Controllers
                 return HttpNotFound();
             }
             ViewBag.userID = new SelectList(db.users, "userID", "userEmail", missionQuestions.userID);
+            ViewBag.missionID = new SelectList(db.missions, "missionID", "missionName", missionQuestions.missionID);
             return View(missionQuestions);
         }
 
@@ -91,6 +94,7 @@ namespace Project1__MissionQA.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.missionID = new SelectList(db.missions, "missionID", "missionName", missionQuestions.missionID);
             ViewBag.userID = new SelectList(db.users, "userID", "userEmail", missionQuestions.userID);
             return View(missionQuestions);
         }

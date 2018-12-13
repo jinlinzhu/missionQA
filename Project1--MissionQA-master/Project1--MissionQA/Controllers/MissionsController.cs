@@ -135,14 +135,15 @@ namespace Project1__MissionQA.Controllers
         [Authorize]
         public ActionResult FAQ(string email)
         {
-            IEnumerable<MissionQuestions> questions = db.Database.SqlQuery<MissionQuestions>(
+            /*
+            var questions = db.Database.SqlQuery<MissionQuestions>(
             "SELECT question, answer " +
             "FROM MissionQuestions " +
             "INNER JOIN Users ON MissionQuestions.userID = Users.userID" +
             "WHERE userEmail = '" + email + "'");
 
             ViewBag.questions = questions.ToList();
-
+            */
             return View();
         }
     }
