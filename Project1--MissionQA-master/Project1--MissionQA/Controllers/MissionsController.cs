@@ -140,10 +140,11 @@ namespace Project1__MissionQA.Controllers
             "SELECT question, answer " +
             "FROM MissionQuestions " +
             "INNER JOIN Users ON MissionQuestions.userID = Users.userID" +
-            "WHERE userEmail = '" + email + "'");
+            "WHERE userEmail = '" + User.Identity.Name + "'");
 
             ViewBag.questions = questions.ToList();
             */
+
             return View();
         }
     }

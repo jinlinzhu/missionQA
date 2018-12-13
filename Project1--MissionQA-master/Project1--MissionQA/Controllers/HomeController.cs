@@ -39,7 +39,7 @@ namespace Project1__MissionQA.Controllers
             if (currentUser.Count() > 0)
             {
                 FormsAuthentication.SetAuthCookie(email, rememberMe);
-                return RedirectToAction("Index", "Home", new { email = email });
+                return RedirectToAction("Overview", "Missions");
             }
             else
             {
